@@ -57,7 +57,7 @@ Job_Route.delete("/jobs/:id", async (req, res) => {
 // FOR THE ADMIN LOGIN
 Job_Route.post("/admin", (req, res) => {
     // Predefined admin credentials
-    const adminEmail = "mprofessional.admin@gmail.com";
+    const adminEmail = "ertaruntak@gmail.com";
     const adminPassword = "tarun.admin";
 
     // Get email and password from request body
@@ -66,6 +66,7 @@ Job_Route.post("/admin", (req, res) => {
     // Check if email and password match the admin credentials
     if (email === adminEmail && password === adminPassword) {
         res.status(200).send("Login Success");
+        
     } else {
         res.status(400).send("Unauthorized");
     }
